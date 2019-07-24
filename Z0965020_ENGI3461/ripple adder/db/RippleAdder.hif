@@ -1,0 +1,288 @@
+Version 8.0 Build 215 05/29/2008 SJ Full Version
+38
+2494
+OFF
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+8bitCSA
+# storage
+db|RippleAdder.(0).cnf
+db|RippleAdder.(0).cnf
+# case_insensitive
+# source_file
+8bitCSA.bdf
+337250e09c8ac82e3d483b873e4d852e
+25
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+mux
+# storage
+db|RippleAdder.(1).cnf
+db|RippleAdder.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+mux.vhd
+12b99371b699e729ec2d1e624729db6
+4
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# lmf
+c:|altera|80|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+8bitAdder
+# storage
+db|RippleAdder.(2).cnf
+db|RippleAdder.(2).cnf
+# case_insensitive
+# source_file
+8bitAdder.bdf
+a75af37ccdb4e47e37381a73f1f8cc90
+25
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+8bitAdder:inst7
+8bitAdder:inst6
+8bitAdder:inst5
+8bitAdder:inst
+}
+# macro_sequence
+
+# end
+# entity
+4bitadder
+# storage
+db|RippleAdder.(3).cnf
+db|RippleAdder.(3).cnf
+# case_insensitive
+# source_file
+4bitadder.bdf
+bf917b2156365cdcea4076d71d9755
+25
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+8bitAdder:inst7|4bitadder:inst5
+8bitAdder:inst7|4bitadder:inst
+8bitAdder:inst6|4bitadder:inst5
+8bitAdder:inst6|4bitadder:inst
+8bitAdder:inst5|4bitadder:inst5
+8bitAdder:inst5|4bitadder:inst
+8bitAdder:inst|4bitadder:inst5
+8bitAdder:inst|4bitadder:inst
+}
+# macro_sequence
+
+# end
+# entity
+2bitAdder
+# storage
+db|RippleAdder.(4).cnf
+db|RippleAdder.(4).cnf
+# case_insensitive
+# source_file
+2bitAdder.bdf
+acbaa4c128868b647313c64eabdfa033
+25
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst6
+8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst
+8bitAdder:inst7|4bitadder:inst|2bitAdder:inst6
+8bitAdder:inst7|4bitadder:inst|2bitAdder:inst
+8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst6
+8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst
+8bitAdder:inst6|4bitadder:inst|2bitAdder:inst6
+8bitAdder:inst6|4bitadder:inst|2bitAdder:inst
+8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst6
+8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst
+8bitAdder:inst5|4bitadder:inst|2bitAdder:inst6
+8bitAdder:inst5|4bitadder:inst|2bitAdder:inst
+8bitAdder:inst|4bitadder:inst5|2bitAdder:inst6
+8bitAdder:inst|4bitadder:inst5|2bitAdder:inst
+8bitAdder:inst|4bitadder:inst|2bitAdder:inst6
+8bitAdder:inst|4bitadder:inst|2bitAdder:inst
+}
+# macro_sequence
+
+# end
+# entity
+fullAdder
+# storage
+db|RippleAdder.(5).cnf
+db|RippleAdder.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+fullAdder.vhd
+46478bcde4a7ac8ad6d722aa3160a
+4
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1
+8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst
+8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1
+8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst|fullAdder:inst
+8bitAdder:inst7|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1
+8bitAdder:inst7|4bitadder:inst|2bitAdder:inst6|fullAdder:inst
+8bitAdder:inst7|4bitadder:inst|2bitAdder:inst|fullAdder:inst1
+8bitAdder:inst7|4bitadder:inst|2bitAdder:inst|fullAdder:inst
+8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1
+8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst
+8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1
+8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst|fullAdder:inst
+8bitAdder:inst6|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1
+8bitAdder:inst6|4bitadder:inst|2bitAdder:inst6|fullAdder:inst
+8bitAdder:inst6|4bitadder:inst|2bitAdder:inst|fullAdder:inst1
+8bitAdder:inst6|4bitadder:inst|2bitAdder:inst|fullAdder:inst
+8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1
+8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst
+8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1
+8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst|fullAdder:inst
+8bitAdder:inst5|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1
+8bitAdder:inst5|4bitadder:inst|2bitAdder:inst6|fullAdder:inst
+8bitAdder:inst5|4bitadder:inst|2bitAdder:inst|fullAdder:inst1
+8bitAdder:inst5|4bitadder:inst|2bitAdder:inst|fullAdder:inst
+8bitAdder:inst|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1
+8bitAdder:inst|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst
+8bitAdder:inst|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1
+8bitAdder:inst|4bitadder:inst5|2bitAdder:inst|fullAdder:inst
+8bitAdder:inst|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1
+8bitAdder:inst|4bitadder:inst|2bitAdder:inst6|fullAdder:inst
+8bitAdder:inst|4bitadder:inst|2bitAdder:inst|fullAdder:inst1
+8bitAdder:inst|4bitadder:inst|2bitAdder:inst|fullAdder:inst
+}
+# lmf
+c:|altera|80|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+mux8bit
+# storage
+db|RippleAdder.(6).cnf
+db|RippleAdder.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+8bitmux.vhd
+a8e65d7ed782bab0cc28281d44edd9c2
+4
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# lmf
+c:|altera|80|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+32bitCSA
+# storage
+db|RippleAdder.(7).cnf
+db|RippleAdder.(7).cnf
+# case_insensitive
+# source_file
+32bitCSA.bdf
+6bfd5f9c8e6fe5dffa5acc2d2b5494c5
+25
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+32bitAdder
+# storage
+db|RippleAdder.(8).cnf
+db|RippleAdder.(8).cnf
+# case_insensitive
+# source_file
+32bitAdder.bdf
+4f2df2e913c35a4627c671a5dbbd821
+25
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

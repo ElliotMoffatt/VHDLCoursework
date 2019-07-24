@@ -1,0 +1,338 @@
+Simulator report for RippleAdder
+Fri Apr 20 19:32:07 2018
+Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 178 nodes    ;
+; Simulation Coverage         ;     100.00 % ;
+; Total Number of Transitions ; 608          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone      ;
+; Device                      ; EP1C20F400C7 ;
++-----------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                   ;
++--------------------------------------------------------------------------------------------+-------------------------+---------------+
+; Option                                                                                     ; Setting                 ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------------------+---------------+
+; Simulation mode                                                                            ; Timing                  ; Timing        ;
+; Start time                                                                                 ; 0 ns                    ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF                    ;               ;
+; Vector input source                                                                        ; 32bitRippleWaveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                      ; On            ;
+; Check outputs                                                                              ; Off                     ; Off           ;
+; Report simulation coverage                                                                 ; On                      ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                      ; On            ;
+; Display missing 1-value coverage report                                                    ; On                      ; On            ;
+; Display missing 0-value coverage report                                                    ; On                      ; On            ;
+; Detect setup and hold time violations                                                      ; Off                     ; Off           ;
+; Detect glitches                                                                            ; Off                     ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                     ; Off           ;
+; Generate Signal Activity File                                                              ; Off                     ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                     ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                     ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                      ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE              ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                     ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                     ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                    ; Auto          ;
++--------------------------------------------------------------------------------------------+-------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;     100.00 % ;
+; Total nodes checked                                 ; 178          ;
+; Total output ports checked                          ; 178          ;
+; Total output ports with complete 1/0-value coverage ; 178          ;
+; Total output ports with no 1/0-value coverage       ; 0            ;
+; Total output ports with no 1-value coverage         ; 0            ;
+; Total output ports with no 0-value coverage         ; 0            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                ;
++------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                          ; Output Port Name                                                                   ; Output Port Type ;
++------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+
+; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|Cout~61 ; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|Cout~61 ; combout          ;
+; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|Cout~61  ; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|Cout~61  ; combout          ;
+; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|Cout~61  ; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|Cout~61  ; combout          ;
+; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst|fullAdder:inst|Cout~61   ; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst|fullAdder:inst|Cout~61   ; combout          ;
+; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|Cout~61 ; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|Cout~61 ; combout          ;
+; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|Cout~61  ; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|Cout~61  ; combout          ;
+; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|Cout~61  ; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|Cout~61  ; combout          ;
+; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst|fullAdder:inst|Cout~61   ; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst|fullAdder:inst|Cout~61   ; combout          ;
+; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|Cout~61 ; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|Cout~61 ; combout          ;
+; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|Cout~61  ; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|Cout~61  ; combout          ;
+; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|Cout~61  ; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|Cout~61  ; combout          ;
+; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst|fullAdder:inst|Cout~61   ; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst|fullAdder:inst|Cout~61   ; combout          ;
+; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|Cout~61  ; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|Cout~61  ; combout          ;
+; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|Cout~61   ; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|Cout~61   ; combout          ;
+; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|Cout~61   ; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|Cout~61   ; combout          ;
+; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst|fullAdder:inst|Cout~61    ; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst|fullAdder:inst|Cout~61    ; combout          ;
+; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst|fullAdder:inst|Cout~62    ; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst|fullAdder:inst|Cout~62    ; combout          ;
+; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst|fullAdder:inst1|Cout~2    ; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst|fullAdder:inst1|Cout~2    ; combout          ;
+; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|Cout~62   ; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|Cout~62   ; combout          ;
+; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1|Cout~2   ; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1|Cout~2   ; combout          ;
+; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|Cout~62   ; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|Cout~62   ; combout          ;
+; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1|Cout~2   ; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1|Cout~2   ; combout          ;
+; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|Cout~62  ; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|Cout~62  ; combout          ;
+; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1|Cout~2  ; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1|Cout~2  ; combout          ;
+; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst|fullAdder:inst|Cout~62   ; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst|fullAdder:inst|Cout~62   ; combout          ;
+; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst|fullAdder:inst1|Cout~2   ; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst|fullAdder:inst1|Cout~2   ; combout          ;
+; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|Cout~62  ; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|Cout~62  ; combout          ;
+; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1|Cout~2  ; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1|Cout~2  ; combout          ;
+; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|Cout~62  ; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|Cout~62  ; combout          ;
+; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1|Cout~2  ; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1|Cout~2  ; combout          ;
+; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|Cout~62 ; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|Cout~62 ; combout          ;
+; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1|Cout~2 ; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1|Cout~2 ; combout          ;
+; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst|fullAdder:inst|Cout~62   ; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst|fullAdder:inst|Cout~62   ; combout          ;
+; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst|fullAdder:inst1|Cout~2   ; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst|fullAdder:inst1|Cout~2   ; combout          ;
+; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|Cout~62  ; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|Cout~62  ; combout          ;
+; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1|Cout~2  ; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1|Cout~2  ; combout          ;
+; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|Cout~62  ; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|Cout~62  ; combout          ;
+; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1|Cout~2  ; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1|Cout~2  ; combout          ;
+; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|Cout~62 ; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|Cout~62 ; combout          ;
+; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1|Cout~2 ; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1|Cout~2 ; combout          ;
+; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst|fullAdder:inst|Cout~62   ; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst|fullAdder:inst|Cout~62   ; combout          ;
+; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst|fullAdder:inst1|Cout~2   ; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst|fullAdder:inst1|Cout~2   ; combout          ;
+; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|Cout~62  ; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|Cout~62  ; combout          ;
+; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1|Cout~2  ; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1|Cout~2  ; combout          ;
+; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|Cout~62  ; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|Cout~62  ; combout          ;
+; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1|Cout~2  ; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1|Cout~2  ; combout          ;
+; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|Cout~62 ; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|Cout~62 ; combout          ;
+; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1|Cout~2 ; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1|Cout~2 ; combout          ;
+; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1|S      ; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1|S      ; combout          ;
+; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|S~14    ; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|S~14    ; combout          ;
+; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1|S       ; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1|S       ; combout          ;
+; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|S~14     ; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|S~14     ; combout          ;
+; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1|S       ; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1|S       ; combout          ;
+; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|S~14     ; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|S~14     ; combout          ;
+; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst|fullAdder:inst1|S        ; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst|fullAdder:inst1|S        ; combout          ;
+; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst|fullAdder:inst|S~14      ; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst|fullAdder:inst|S~14      ; combout          ;
+; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1|S      ; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1|S      ; combout          ;
+; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|S~14    ; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|S~14    ; combout          ;
+; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1|S       ; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1|S       ; combout          ;
+; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|S~14     ; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|S~14     ; combout          ;
+; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1|S       ; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1|S       ; combout          ;
+; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|S~14     ; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|S~14     ; combout          ;
+; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst|fullAdder:inst1|S        ; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst|fullAdder:inst1|S        ; combout          ;
+; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst|fullAdder:inst|S~14      ; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst|fullAdder:inst|S~14      ; combout          ;
+; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1|S      ; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1|S      ; combout          ;
+; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|S~14    ; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|S~14    ; combout          ;
+; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1|S       ; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1|S       ; combout          ;
+; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|S~14     ; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|S~14     ; combout          ;
+; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1|S       ; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1|S       ; combout          ;
+; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|S~14     ; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|S~14     ; combout          ;
+; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst|fullAdder:inst1|S        ; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst|fullAdder:inst1|S        ; combout          ;
+; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst|fullAdder:inst|S~14      ; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst|fullAdder:inst|S~14      ; combout          ;
+; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1|S       ; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1|S       ; combout          ;
+; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|S~14     ; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst|S~14     ; combout          ;
+; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1|S        ; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1|S        ; combout          ;
+; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|S~14      ; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst|fullAdder:inst|S~14      ; combout          ;
+; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1|S        ; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1|S        ; combout          ;
+; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|S~14      ; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst6|fullAdder:inst|S~14      ; combout          ;
+; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst|fullAdder:inst1|S         ; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst|fullAdder:inst1|S         ; combout          ;
+; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst|fullAdder:inst|S~14       ; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst|fullAdder:inst|S~14       ; combout          ;
+; |32bitAdder|S[32]                                                                  ; |32bitAdder|S[32]                                                                  ; padio            ;
+; |32bitAdder|S[31]                                                                  ; |32bitAdder|S[31]                                                                  ; padio            ;
+; |32bitAdder|S[30]                                                                  ; |32bitAdder|S[30]                                                                  ; padio            ;
+; |32bitAdder|S[29]                                                                  ; |32bitAdder|S[29]                                                                  ; padio            ;
+; |32bitAdder|S[28]                                                                  ; |32bitAdder|S[28]                                                                  ; padio            ;
+; |32bitAdder|S[27]                                                                  ; |32bitAdder|S[27]                                                                  ; padio            ;
+; |32bitAdder|S[26]                                                                  ; |32bitAdder|S[26]                                                                  ; padio            ;
+; |32bitAdder|S[25]                                                                  ; |32bitAdder|S[25]                                                                  ; padio            ;
+; |32bitAdder|S[24]                                                                  ; |32bitAdder|S[24]                                                                  ; padio            ;
+; |32bitAdder|S[23]                                                                  ; |32bitAdder|S[23]                                                                  ; padio            ;
+; |32bitAdder|S[22]                                                                  ; |32bitAdder|S[22]                                                                  ; padio            ;
+; |32bitAdder|S[21]                                                                  ; |32bitAdder|S[21]                                                                  ; padio            ;
+; |32bitAdder|S[20]                                                                  ; |32bitAdder|S[20]                                                                  ; padio            ;
+; |32bitAdder|S[19]                                                                  ; |32bitAdder|S[19]                                                                  ; padio            ;
+; |32bitAdder|S[18]                                                                  ; |32bitAdder|S[18]                                                                  ; padio            ;
+; |32bitAdder|S[17]                                                                  ; |32bitAdder|S[17]                                                                  ; padio            ;
+; |32bitAdder|S[16]                                                                  ; |32bitAdder|S[16]                                                                  ; padio            ;
+; |32bitAdder|S[15]                                                                  ; |32bitAdder|S[15]                                                                  ; padio            ;
+; |32bitAdder|S[14]                                                                  ; |32bitAdder|S[14]                                                                  ; padio            ;
+; |32bitAdder|S[13]                                                                  ; |32bitAdder|S[13]                                                                  ; padio            ;
+; |32bitAdder|S[12]                                                                  ; |32bitAdder|S[12]                                                                  ; padio            ;
+; |32bitAdder|S[11]                                                                  ; |32bitAdder|S[11]                                                                  ; padio            ;
+; |32bitAdder|S[10]                                                                  ; |32bitAdder|S[10]                                                                  ; padio            ;
+; |32bitAdder|S[9]                                                                   ; |32bitAdder|S[9]                                                                   ; padio            ;
+; |32bitAdder|S[8]                                                                   ; |32bitAdder|S[8]                                                                   ; padio            ;
+; |32bitAdder|S[7]                                                                   ; |32bitAdder|S[7]                                                                   ; padio            ;
+; |32bitAdder|S[6]                                                                   ; |32bitAdder|S[6]                                                                   ; padio            ;
+; |32bitAdder|S[5]                                                                   ; |32bitAdder|S[5]                                                                   ; padio            ;
+; |32bitAdder|S[4]                                                                   ; |32bitAdder|S[4]                                                                   ; padio            ;
+; |32bitAdder|S[3]                                                                   ; |32bitAdder|S[3]                                                                   ; padio            ;
+; |32bitAdder|S[2]                                                                   ; |32bitAdder|S[2]                                                                   ; padio            ;
+; |32bitAdder|S[1]                                                                   ; |32bitAdder|S[1]                                                                   ; padio            ;
+; |32bitAdder|S[0]                                                                   ; |32bitAdder|S[0]                                                                   ; padio            ;
+; |32bitAdder|B[30]                                                                  ; |32bitAdder|B[30]~corein                                                           ; combout          ;
+; |32bitAdder|A[30]                                                                  ; |32bitAdder|A[30]~corein                                                           ; combout          ;
+; |32bitAdder|B[28]                                                                  ; |32bitAdder|B[28]~corein                                                           ; combout          ;
+; |32bitAdder|A[28]                                                                  ; |32bitAdder|A[28]~corein                                                           ; combout          ;
+; |32bitAdder|B[26]                                                                  ; |32bitAdder|B[26]~corein                                                           ; combout          ;
+; |32bitAdder|A[26]                                                                  ; |32bitAdder|A[26]~corein                                                           ; combout          ;
+; |32bitAdder|B[24]                                                                  ; |32bitAdder|B[24]~corein                                                           ; combout          ;
+; |32bitAdder|A[24]                                                                  ; |32bitAdder|A[24]~corein                                                           ; combout          ;
+; |32bitAdder|B[22]                                                                  ; |32bitAdder|B[22]~corein                                                           ; combout          ;
+; |32bitAdder|A[22]                                                                  ; |32bitAdder|A[22]~corein                                                           ; combout          ;
+; |32bitAdder|B[20]                                                                  ; |32bitAdder|B[20]~corein                                                           ; combout          ;
+; |32bitAdder|A[20]                                                                  ; |32bitAdder|A[20]~corein                                                           ; combout          ;
+; |32bitAdder|B[18]                                                                  ; |32bitAdder|B[18]~corein                                                           ; combout          ;
+; |32bitAdder|A[18]                                                                  ; |32bitAdder|A[18]~corein                                                           ; combout          ;
+; |32bitAdder|B[16]                                                                  ; |32bitAdder|B[16]~corein                                                           ; combout          ;
+; |32bitAdder|A[16]                                                                  ; |32bitAdder|A[16]~corein                                                           ; combout          ;
+; |32bitAdder|B[14]                                                                  ; |32bitAdder|B[14]~corein                                                           ; combout          ;
+; |32bitAdder|A[14]                                                                  ; |32bitAdder|A[14]~corein                                                           ; combout          ;
+; |32bitAdder|B[12]                                                                  ; |32bitAdder|B[12]~corein                                                           ; combout          ;
+; |32bitAdder|A[12]                                                                  ; |32bitAdder|A[12]~corein                                                           ; combout          ;
+; |32bitAdder|B[10]                                                                  ; |32bitAdder|B[10]~corein                                                           ; combout          ;
+; |32bitAdder|A[10]                                                                  ; |32bitAdder|A[10]~corein                                                           ; combout          ;
+; |32bitAdder|B[8]                                                                   ; |32bitAdder|B[8]~corein                                                            ; combout          ;
+; |32bitAdder|A[8]                                                                   ; |32bitAdder|A[8]~corein                                                            ; combout          ;
+; |32bitAdder|B[6]                                                                   ; |32bitAdder|B[6]~corein                                                            ; combout          ;
+; |32bitAdder|A[6]                                                                   ; |32bitAdder|A[6]~corein                                                            ; combout          ;
+; |32bitAdder|B[4]                                                                   ; |32bitAdder|B[4]~corein                                                            ; combout          ;
+; |32bitAdder|A[4]                                                                   ; |32bitAdder|A[4]~corein                                                            ; combout          ;
+; |32bitAdder|B[2]                                                                   ; |32bitAdder|B[2]~corein                                                            ; combout          ;
+; |32bitAdder|A[2]                                                                   ; |32bitAdder|A[2]~corein                                                            ; combout          ;
+; |32bitAdder|B[0]                                                                   ; |32bitAdder|B[0]~corein                                                            ; combout          ;
+; |32bitAdder|A[0]                                                                   ; |32bitAdder|A[0]~corein                                                            ; combout          ;
+; |32bitAdder|Cin                                                                    ; |32bitAdder|Cin~corein                                                             ; combout          ;
+; |32bitAdder|A[1]                                                                   ; |32bitAdder|A[1]~corein                                                            ; combout          ;
+; |32bitAdder|B[1]                                                                   ; |32bitAdder|B[1]~corein                                                            ; combout          ;
+; |32bitAdder|A[3]                                                                   ; |32bitAdder|A[3]~corein                                                            ; combout          ;
+; |32bitAdder|B[3]                                                                   ; |32bitAdder|B[3]~corein                                                            ; combout          ;
+; |32bitAdder|A[5]                                                                   ; |32bitAdder|A[5]~corein                                                            ; combout          ;
+; |32bitAdder|B[5]                                                                   ; |32bitAdder|B[5]~corein                                                            ; combout          ;
+; |32bitAdder|A[7]                                                                   ; |32bitAdder|A[7]~corein                                                            ; combout          ;
+; |32bitAdder|B[7]                                                                   ; |32bitAdder|B[7]~corein                                                            ; combout          ;
+; |32bitAdder|A[9]                                                                   ; |32bitAdder|A[9]~corein                                                            ; combout          ;
+; |32bitAdder|B[9]                                                                   ; |32bitAdder|B[9]~corein                                                            ; combout          ;
+; |32bitAdder|A[11]                                                                  ; |32bitAdder|A[11]~corein                                                           ; combout          ;
+; |32bitAdder|B[11]                                                                  ; |32bitAdder|B[11]~corein                                                           ; combout          ;
+; |32bitAdder|A[13]                                                                  ; |32bitAdder|A[13]~corein                                                           ; combout          ;
+; |32bitAdder|B[13]                                                                  ; |32bitAdder|B[13]~corein                                                           ; combout          ;
+; |32bitAdder|A[15]                                                                  ; |32bitAdder|A[15]~corein                                                           ; combout          ;
+; |32bitAdder|B[15]                                                                  ; |32bitAdder|B[15]~corein                                                           ; combout          ;
+; |32bitAdder|A[17]                                                                  ; |32bitAdder|A[17]~corein                                                           ; combout          ;
+; |32bitAdder|B[17]                                                                  ; |32bitAdder|B[17]~corein                                                           ; combout          ;
+; |32bitAdder|A[19]                                                                  ; |32bitAdder|A[19]~corein                                                           ; combout          ;
+; |32bitAdder|B[19]                                                                  ; |32bitAdder|B[19]~corein                                                           ; combout          ;
+; |32bitAdder|A[21]                                                                  ; |32bitAdder|A[21]~corein                                                           ; combout          ;
+; |32bitAdder|B[21]                                                                  ; |32bitAdder|B[21]~corein                                                           ; combout          ;
+; |32bitAdder|A[23]                                                                  ; |32bitAdder|A[23]~corein                                                           ; combout          ;
+; |32bitAdder|B[23]                                                                  ; |32bitAdder|B[23]~corein                                                           ; combout          ;
+; |32bitAdder|A[25]                                                                  ; |32bitAdder|A[25]~corein                                                           ; combout          ;
+; |32bitAdder|B[25]                                                                  ; |32bitAdder|B[25]~corein                                                           ; combout          ;
+; |32bitAdder|A[27]                                                                  ; |32bitAdder|A[27]~corein                                                           ; combout          ;
+; |32bitAdder|B[27]                                                                  ; |32bitAdder|B[27]~corein                                                           ; combout          ;
+; |32bitAdder|A[29]                                                                  ; |32bitAdder|A[29]~corein                                                           ; combout          ;
+; |32bitAdder|B[29]                                                                  ; |32bitAdder|B[29]~corein                                                           ; combout          ;
+; |32bitAdder|A[31]                                                                  ; |32bitAdder|A[31]~corein                                                           ; combout          ;
+; |32bitAdder|B[31]                                                                  ; |32bitAdder|B[31]~corein                                                           ; combout          ;
++------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------+
+; Missing 1-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------+
+; Missing 0-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
+    Info: Processing started: Fri Apr 20 19:32:05 2018
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off RippleAdder -c RippleAdder
+Info: Using vector source file "F:/CS/vhdl coursework/ripple adder/32bitRippleWaveform.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is     100.00 %
+Info: Number of transitions in simulation is 608
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 208 megabytes
+    Info: Processing ended: Fri Apr 20 19:32:08 2018
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:00
+
+

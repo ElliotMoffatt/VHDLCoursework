@@ -1,0 +1,21 @@
+32bit CSA
+
+input (A,B,Cin)		input change(ns)	output change(ns)	delay(ns)
+1,1,0			30.0			41.464			
+1,1,1			60.0			69.238
+All_1,1,0		90.0			147.158		
+All_1,1,1		180.0			189.238		
+All_1,All_1,0		240.0			252.334		
+All_1,All_1,1		300.0			309.238		
+0,0,0			360.0			376.414
+
+Ripple Adder
+
+input (A,B,Cin)		input change(ns)	output change(ns)	delay(ns)
+1,1,0			30.0			41.464			
+1,1,1			60			69.238			
+All_1,1,0		90			147.158			
+All_1,1,1		150			159.238			
+All_1,All_1,0		210			220.334
+All_1,All_1,1		270			279.238
+0,0,0			330			346.414

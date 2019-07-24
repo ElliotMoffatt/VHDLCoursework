@@ -1,0 +1,321 @@
+Analysis & Synthesis report for RippleAdder
+Fri Apr 20 19:30:44 2018
+Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. General Register Statistics
+  8. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Fri Apr 20 19:30:43 2018    ;
+; Quartus II Version          ; 8.0 Build 215 05/29/2008 SJ Full Version ;
+; Revision Name               ; RippleAdder                              ;
+; Top-level Entity Name       ; 32bitAdder                               ;
+; Family                      ; Cyclone                                  ;
+; Total logic elements        ; 80                                       ;
+; Total pins                  ; 98                                       ;
+; Total virtual pins          ; 0                                        ;
+; Total memory bits           ; 0                                        ;
+; DSP block 9-bit elements    ; N/A until Partition Merge                ;
+; Total PLLs                  ; 0                                        ;
+; Total DLLs                  ; N/A until Partition Merge                ;
++-----------------------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                          ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Option                                                       ; Setting            ; Default Value      ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Device                                                       ; EP1C20F400C7       ;                    ;
+; Top-level entity name                                        ; 32bitAdder         ; RippleAdder        ;
+; Family name                                                  ; Cyclone            ; Cyclone IV GX      ;
+; Use Generated Physical Constraints File                      ; Off                ;                    ;
+; Use smart compilation                                        ; Off                ; Off                ;
+; Maximum processors allowed for parallel compilation          ; 1                  ; 1                  ;
+; Restructure Multiplexers                                     ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                          ; Off                ; Off                ;
+; Preserve fewer node names                                    ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                ; Off                ;
+; Verilog Version                                              ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                 ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                     ; Auto               ; Auto               ;
+; Safe State Machine                                           ; Off                ; Off                ;
+; Extract Verilog State Machines                               ; On                 ; On                 ;
+; Extract VHDL State Machines                                  ; On                 ; On                 ;
+; Ignore Verilog initial constructs                            ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                   ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops               ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                 ; On                 ;
+; Parallel Synthesis                                           ; Off                ; Off                ;
+; NOT Gate Push-Back                                           ; On                 ; On                 ;
+; Power-Up Don't Care                                          ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                 ; Off                ; Off                ;
+; Remove Duplicate Registers                                   ; On                 ; On                 ;
+; Ignore CARRY Buffers                                         ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                       ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                ; Off                ;
+; Ignore LCELL Buffers                                         ; Off                ; Off                ;
+; Ignore SOFT Buffers                                          ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                               ; Off                ; Off                ;
+; Optimization Technique                                       ; Balanced           ; Balanced           ;
+; Carry Chain Length                                           ; 70                 ; 70                 ;
+; Auto Carry Chains                                            ; On                 ; On                 ;
+; Auto Open-Drain Pins                                         ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                        ; Off                ; Off                ;
+; Perform gate-level register retiming                         ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax       ; On                 ; On                 ;
+; Auto ROM Replacement                                         ; On                 ; On                 ;
+; Auto RAM Replacement                                         ; On                 ; On                 ;
+; Auto Shift Register Replacement                              ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                ; On                 ; On                 ;
+; Strict RAM Replacement                                       ; Off                ; Off                ;
+; Allow Synchronous Control Signals                            ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                       ; Off                ; Off                ;
+; Auto RAM Block Balancing                                     ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                            ; Off                ; Off                ;
+; Auto Resource Sharing                                        ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                ; Off                ; Off                ;
+; Ignore translate_off and synthesis_off directives            ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                           ; Off                ; Off                ;
+; Synchronization Register Chain Length                        ; 3                  ; 3                  ;
+; PowerPlay Power Optimization                                 ; Normal compilation ; Normal compilation ;
+; HDL message level                                            ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages              ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report     ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                ; 100                ;
+; Clock MUX Protection                                         ; On                 ; On                 ;
+; Block Design Naming                                          ; Auto               ; Auto               ;
+; Synthesis Effort                                             ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                 ; On                 ;
++--------------------------------------------------------------+--------------------+--------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                      ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                      ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------+
+; fullAdder.vhd                    ; yes             ; User VHDL File                     ; F:/CS/vhdl coursework/ripple adder/fullAdder.vhd  ;
+; 2bitAdder.bdf                    ; yes             ; User Block Diagram/Schematic File  ; F:/CS/vhdl coursework/ripple adder/2bitAdder.bdf  ;
+; 4bitadder.bdf                    ; yes             ; User Block Diagram/Schematic File  ; F:/CS/vhdl coursework/ripple adder/4bitadder.bdf  ;
+; 8bitAdder.bdf                    ; yes             ; User Block Diagram/Schematic File  ; F:/CS/vhdl coursework/ripple adder/8bitAdder.bdf  ;
+; 32bitAdder.bdf                   ; yes             ; User Block Diagram/Schematic File  ; F:/CS/vhdl coursework/ripple adder/32bitAdder.bdf ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 80    ;
+;     -- Combinational with no register       ; 80    ;
+;     -- Register only                        ; 0     ;
+;     -- Combinational with a register        ; 0     ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 32    ;
+;     -- 3 input functions                    ; 32    ;
+;     -- 2 input functions                    ; 16    ;
+;     -- 1 input functions                    ; 0     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 80    ;
+;     -- arithmetic mode                      ; 0     ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 0     ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+; I/O pins                                    ; 98    ;
+; Maximum fan-out node                        ; B[30] ;
+; Maximum fan-out                             ; 3     ;
+; Total fan-out                               ; 289   ;
+; Average fan-out                             ; 1.62  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                              ;
++-------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node    ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                         ; Library Name ;
++-------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------+--------------+
+; |32bitAdder                   ; 80 (0)      ; 0            ; 0           ; 98   ; 0            ; 80 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder                                                                 ; work         ;
+;    |8bitAdder:inst5|          ; 20 (0)      ; 0            ; 0           ; 0    ; 0            ; 20 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst5                                                 ; work         ;
+;       |4bitadder:inst5|       ; 10 (0)      ; 0            ; 0           ; 0    ; 0            ; 10 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst5|4bitadder:inst5                                 ; work         ;
+;          |2bitAdder:inst6|    ; 5 (0)       ; 0            ; 0           ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst6                 ; work         ;
+;             |fullAdder:inst1| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1 ; work         ;
+;             |fullAdder:inst|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst  ; work         ;
+;          |2bitAdder:inst|     ; 5 (0)       ; 0            ; 0           ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst                  ; work         ;
+;             |fullAdder:inst1| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1  ; work         ;
+;             |fullAdder:inst|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst5|4bitadder:inst5|2bitAdder:inst|fullAdder:inst   ; work         ;
+;       |4bitadder:inst|        ; 10 (0)      ; 0            ; 0           ; 0    ; 0            ; 10 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst5|4bitadder:inst                                  ; work         ;
+;          |2bitAdder:inst6|    ; 5 (0)       ; 0            ; 0           ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst6                  ; work         ;
+;             |fullAdder:inst1| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1  ; work         ;
+;             |fullAdder:inst|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst6|fullAdder:inst   ; work         ;
+;          |2bitAdder:inst|     ; 5 (0)       ; 0            ; 0           ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst                   ; work         ;
+;             |fullAdder:inst1| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst|fullAdder:inst1   ; work         ;
+;             |fullAdder:inst|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst5|4bitadder:inst|2bitAdder:inst|fullAdder:inst    ; work         ;
+;    |8bitAdder:inst6|          ; 20 (0)      ; 0            ; 0           ; 0    ; 0            ; 20 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst6                                                 ; work         ;
+;       |4bitadder:inst5|       ; 10 (0)      ; 0            ; 0           ; 0    ; 0            ; 10 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst6|4bitadder:inst5                                 ; work         ;
+;          |2bitAdder:inst6|    ; 5 (0)       ; 0            ; 0           ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst6                 ; work         ;
+;             |fullAdder:inst1| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1 ; work         ;
+;             |fullAdder:inst|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst  ; work         ;
+;          |2bitAdder:inst|     ; 5 (0)       ; 0            ; 0           ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst                  ; work         ;
+;             |fullAdder:inst1| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1  ; work         ;
+;             |fullAdder:inst|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst6|4bitadder:inst5|2bitAdder:inst|fullAdder:inst   ; work         ;
+;       |4bitadder:inst|        ; 10 (0)      ; 0            ; 0           ; 0    ; 0            ; 10 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst6|4bitadder:inst                                  ; work         ;
+;          |2bitAdder:inst6|    ; 5 (0)       ; 0            ; 0           ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst6                  ; work         ;
+;             |fullAdder:inst1| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1  ; work         ;
+;             |fullAdder:inst|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst6|fullAdder:inst   ; work         ;
+;          |2bitAdder:inst|     ; 5 (0)       ; 0            ; 0           ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst                   ; work         ;
+;             |fullAdder:inst1| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst|fullAdder:inst1   ; work         ;
+;             |fullAdder:inst|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst6|4bitadder:inst|2bitAdder:inst|fullAdder:inst    ; work         ;
+;    |8bitAdder:inst7|          ; 20 (0)      ; 0            ; 0           ; 0    ; 0            ; 20 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst7                                                 ; work         ;
+;       |4bitadder:inst5|       ; 10 (0)      ; 0            ; 0           ; 0    ; 0            ; 10 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst7|4bitadder:inst5                                 ; work         ;
+;          |2bitAdder:inst6|    ; 5 (0)       ; 0            ; 0           ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst6                 ; work         ;
+;             |fullAdder:inst1| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1 ; work         ;
+;             |fullAdder:inst|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst  ; work         ;
+;          |2bitAdder:inst|     ; 5 (0)       ; 0            ; 0           ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst                  ; work         ;
+;             |fullAdder:inst1| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1  ; work         ;
+;             |fullAdder:inst|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst|fullAdder:inst   ; work         ;
+;       |4bitadder:inst|        ; 10 (0)      ; 0            ; 0           ; 0    ; 0            ; 10 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst7|4bitadder:inst                                  ; work         ;
+;          |2bitAdder:inst6|    ; 5 (0)       ; 0            ; 0           ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst6                  ; work         ;
+;             |fullAdder:inst1| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1  ; work         ;
+;             |fullAdder:inst|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst6|fullAdder:inst   ; work         ;
+;          |2bitAdder:inst|     ; 5 (0)       ; 0            ; 0           ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst                   ; work         ;
+;             |fullAdder:inst1| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst|fullAdder:inst1   ; work         ;
+;             |fullAdder:inst|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst7|4bitadder:inst|2bitAdder:inst|fullAdder:inst    ; work         ;
+;    |8bitAdder:inst|           ; 20 (0)      ; 0            ; 0           ; 0    ; 0            ; 20 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst                                                  ; work         ;
+;       |4bitadder:inst5|       ; 10 (0)      ; 0            ; 0           ; 0    ; 0            ; 10 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst|4bitadder:inst5                                  ; work         ;
+;          |2bitAdder:inst6|    ; 5 (0)       ; 0            ; 0           ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst6                  ; work         ;
+;             |fullAdder:inst1| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1  ; work         ;
+;             |fullAdder:inst|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst   ; work         ;
+;          |2bitAdder:inst|     ; 5 (0)       ; 0            ; 0           ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst                   ; work         ;
+;             |fullAdder:inst1| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst|fullAdder:inst1   ; work         ;
+;             |fullAdder:inst|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst|4bitadder:inst5|2bitAdder:inst|fullAdder:inst    ; work         ;
+;       |4bitadder:inst|        ; 10 (0)      ; 0            ; 0           ; 0    ; 0            ; 10 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst|4bitadder:inst                                   ; work         ;
+;          |2bitAdder:inst6|    ; 5 (0)       ; 0            ; 0           ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst6                   ; work         ;
+;             |fullAdder:inst1| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst6|fullAdder:inst1   ; work         ;
+;             |fullAdder:inst|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst6|fullAdder:inst    ; work         ;
+;          |2bitAdder:inst|     ; 5 (0)       ; 0            ; 0           ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst                    ; work         ;
+;             |fullAdder:inst1| ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst|fullAdder:inst1    ; work         ;
+;             |fullAdder:inst|  ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |32bitAdder|8bitAdder:inst|4bitadder:inst|2bitAdder:inst|fullAdder:inst     ; work         ;
++-------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
+    Info: Processing started: Fri Apr 20 19:30:37 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RippleAdder -c RippleAdder
+Warning: Ignored assignments for entity "32bitAdder" -- entity does not exist in design
+    Warning: Assignment of entity set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region" is ignored
+    Warning: Assignment of entity set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region" is ignored
+    Warning: Assignment of entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_COLOR 14622752 -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -section_id Top is ignored
+Info: Found 2 design units, including 1 entities, in source file fullAdder.vhd
+    Info: Found design unit 1: fullAdder-fullAdder_architecture
+    Info: Found entity 1: fullAdder
+Info: Found 1 design units, including 1 entities, in source file RippleAdder.bdf
+    Info: Found entity 1: RippleAdder
+Info: Found 1 design units, including 1 entities, in source file 2bitAdder.bdf
+    Info: Found entity 1: 2bitAdder
+Info: Found 1 design units, including 1 entities, in source file 4bitadder.bdf
+    Info: Found entity 1: 4bitadder
+Info: Found 1 design units, including 1 entities, in source file 8bitAdder.bdf
+    Info: Found entity 1: 8bitAdder
+Info: Found 1 design units, including 1 entities, in source file 32bitAdder.bdf
+    Info: Found entity 1: 32bitAdder
+Warning: Entity "mux" obtained from "F:/CS/vhdl coursework/ripple adder/mux.vhd" instead of from Quartus II megafunction library
+Info: Found 2 design units, including 1 entities, in source file mux.vhd
+    Info: Found design unit 1: mux-mux_architecture
+    Info: Found entity 1: mux
+Info: Found 1 design units, including 1 entities, in source file 32bitCSA.bdf
+    Info: Found entity 1: 32bitCSA
+Info: Found 1 design units, including 1 entities, in source file 8bitCSA.bdf
+    Info: Found entity 1: 8bitCSA
+Info: Found 2 design units, including 1 entities, in source file 8bitmux.vhd
+    Info: Found design unit 1: mux8bit-mux8bit_architecture
+    Info: Found entity 1: mux8bit
+Info: Elaborating entity "32bitAdder" for the top level hierarchy
+Info: Elaborating entity "8bitAdder" for hierarchy "8bitAdder:inst7"
+Info: Elaborating entity "4bitadder" for hierarchy "8bitAdder:inst7|4bitadder:inst5"
+Info: Elaborating entity "2bitAdder" for hierarchy "8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst6"
+Info: Elaborating entity "fullAdder" for hierarchy "8bitAdder:inst7|4bitadder:inst5|2bitAdder:inst6|fullAdder:inst1"
+Info: Implemented 178 device resources after synthesis - the final resource count might be different
+    Info: Implemented 65 input pins
+    Info: Implemented 33 output pins
+    Info: Implemented 80 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 287 megabytes
+    Info: Processing ended: Fri Apr 20 19:30:45 2018
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:01
+
+
